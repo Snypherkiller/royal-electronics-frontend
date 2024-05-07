@@ -47,3 +47,6 @@ tbody tr:hover {
   transform: scale(1.2);
 }
 
+header, nav {
+  z-index: 100001 !important;
+}
