@@ -88,11 +88,11 @@ const router = createBrowserRouter([
         element:<UpdateSupplier/>,
         loader: ({ params }) => fetch(`http://localhost:8090/Suppliers/update/${params.supplierNIC}`)
       },
-
-
-
     ]
   }
+
+
+  
 ]);
 
 export default router;
