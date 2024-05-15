@@ -29,9 +29,19 @@ const FavItem = () => {
                 </div>
 
 
-                <a href="/shop"className='mt-12 block'><button className='bg-blue-700 text-white font-semibold px-5 py-2 rounded 
-                hover:bg-black transition-all duration-300'> Explore more </button>
+                <a href="/shop" className='mt-12 block'>
+  <button style={{ 
+    backgroundColor: '#007bff', 
+    color: 'white', 
+    fontWeight: 'bold', 
+    padding: '0.5rem 1rem', 
+    borderRadius: '5px', 
+    border: 'none', 
+    cursor: 'pointer', 
+    transition: 'background-color 0.3s, color 0.3s' 
+  }} className='hover:bg-black hover:text-white transition-all duration-300'>Explore more</button>
 </a>
+
 
         </div>
     

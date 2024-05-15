@@ -59,7 +59,7 @@ const UpdateSupplier = () => {
         }
         console.log(supplierObj);
     
-        fetch(`http://localhost:8080/suppliers/update/${supplierNIC}`,{
+        fetch(`http://localhost:8090/suppliers/update/${supplierNIC}`,{
           method: "PUT",
           headers:{
             "content-type":"application/json",

@@ -1,0 +1,73 @@
+.banner {
+    padding: 10rem;
+    background-color: #1c6e69;
+  }
+  
+  .banner-description {
+    font-weight: bold;
+    width: 100%; 
+    padding: 1rem;
+    font-size: 1.25rem;
+    color: #000;
+    line-height: 1.5;
+  }
+  
+  .banner-text span {
+    color: #131258; 
+  }
+  
+.banner-content {
+    display: flex;
+    justify-content: space-between; 
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .banner-text {
+    width: 50%; 
+    color: #fff;
+    font-size: 5rem;
+
+  }
+  
+  
+  .banner input[type='search'] {
+    border-radius: 1rem;
+    padding: 1rem 10rem;
+    outline: none;
+    background-color: #9193a3; 
+    padding: rem 1rem;
+    color: #000000;
+    font-weight: bold;
+    transition: all 0.2s ease-in;
+  }
+  
+  .banner button {
+    background-color: #082a50; 
+    border-radius: 1rem;
+
+    padding: 1rem 3rem;
+    color: #fff;
+    font-weight: bold;
+    transition: all 0.2s ease-in;
+    border: none;
+  }
+  
+  .banner button:hover {
+    background-color: #000;
+  }
+  
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff0000;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.brand-name {
+    margin-right: 1rem; 
+}
+
+  

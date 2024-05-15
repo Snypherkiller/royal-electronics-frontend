@@ -1,6 +1,7 @@
-import  { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars, FaBlog, FaTimes } from 'react-icons/fa';
+import './navbar.css';
 
 const Navbar = () => {
     const [isMenuOpen, setMenuOpen] = useState(false);
@@ -31,49 +32,40 @@ const Navbar = () => {
         { link: 'About', path: '/about' },
         { link: 'Shop', path: '/shop' },
         { link: 'Blog', path: '/blog' },
-        { link: 'Login', path: '/login' },
+        { link: 'Sign-in', path: '/login' },
         { link: 'Sign-up', path: '/Sign-up' },
-
-
-        
-
-    // admin
+        // admin
         { link: 'Admin', path: '/admin/dashboard' }
-
     ];
 
     return (
-        <header className={`w-full fixed top-0 left-0 right-0 transition-all ease-in duration-300 ${isSticky ? 'bg-blue-300 opacity-75' : ''}`}>
-            <nav className="py-4 lg:px-24 px-4">
+        <header className={`navbar ${isSticky ? 'sticky' : ''}`}>
+            <nav>
                 <div className="flex justify-between items-center">
-                    <Link to="/" className="text-2xl font-bold text-red-700 flex items-center gap-2">
-                        <FaBlog className="inline-block" />
+                    <Link to="/" className="logo">
+                        <FaBlog className="icon" />
                         Electronics
                     </Link>
 
-                    <ul className="md:flex space-x-12 hidden">
+                    <ul className="menu-items">
                         {navItems.map(({ link, path }) => (
                             <li key={path}>
-                                <Link to={path} className="block text-base text-black uppercase cursor-pointer hover:text-blue-700">
-                                    {link}
-                                </Link>
+                                <Link to={path}>{link}</Link>
                             </li>
                         ))}
                     </ul>
 
-                    <div className="space-x-12 hidden lg:flex items-center">
+                    <div className="menu-toggle">
                         <button onClick={toggleMenu}>
-                            {isMenuOpen ? <FaTimes className="w-5 hover:text-blue-700" /> : <FaBars className="w-5 hover:text-blue-700" />}
+                            {isMenuOpen ? <FaTimes className="icon" /> : <FaBars className="icon" />}
                         </button>
                     </div>
                 </div>
 
-                <div className={`md:hidden ${isMenuOpen ? 'block fixed top-0 right-0 left-0' : 'hidden'}`}>
-                    <div className="space-y-4 px-4 mt-16 py-7 bg-blue-700 opacity-75">
+                <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
+                    <div className="menu-items">
                         {navItems.map(({ link, path }, index) => (
-                            <Link key={index} to={path} className="block text-base text-black uppercase cursor-pointer hover:text-blue-700">
-                                {link}
-                            </Link>
+                            <Link key={index} to={path}>{link}</Link>
                         ))}
                     </div>
                 </div>

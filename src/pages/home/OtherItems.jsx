@@ -7,7 +7,7 @@ const OtherItems = () => {
 
     useEffect(() => {
 
-        fetch("http://localhost:8080/Items/")
+        fetch("http://localhost:8090/Items/")
         .then(res => res.json())
           .then(data => 
                setItems(data.slice(0,20))

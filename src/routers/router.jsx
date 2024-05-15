@@ -49,9 +49,9 @@ const router = createBrowserRouter([
         path: "/Items/get/:id",
         element: <SingleItem/>,
         loader: ({ params }) => 
-       fetch(`http://localhost:8080/Items/get/${params.id}`) 
+       fetch(`http://localhost:8090/Items/get/${params.id}`) 
   
-      }
+      },
     ]
   },
   {
@@ -73,7 +73,7 @@ const router = createBrowserRouter([
       {
         path:"/admin/dashboard/Update/:id",
         element:<UpdateItems/>,
-        loader: ({ params }) => fetch(`http://localhost:8080/Items/update/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:8090/Items/update/${params.id}`)
       },
       {
         path:"/admin/dashboard/suppliers",
@@ -86,7 +86,7 @@ const router = createBrowserRouter([
       {
         path:"/admin/dashboard/suppliers/update/:supplierNIC",
         element:<UpdateSupplier/>,
-        loader: ({ params }) => fetch(`http://localhost:8080/Suppliers/update/${params.supplierNIC}`)
+        loader: ({ params }) => fetch(`http://localhost:8090/Suppliers/update/${params.supplierNIC}`)
       },
 
 

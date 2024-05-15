@@ -5,7 +5,7 @@
   margin: 10px;
   padding: 30px;
   border-radius: 10px;
-  background-color: #f0f4f8;
+  background-color: #4187cc;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   max-width: 2000px;
 }
@@ -23,8 +23,15 @@
   font-weight: 700;
 }
 
+/* Buttons */
+.button-container {
+  margin-bottom: 20px;
+}
 
-
+.button-container a {
+  margin-right: 10px;
+  text-decoration: none;
+}
 
 .button {
   display: inline-block;
@@ -82,7 +89,7 @@
 }
 
 .table tbody tr:hover {
-  background-color: #fafafa;
+  background-color: #ddd;
 }
 
 /* Edit and Delete Buttons */
@@ -92,50 +99,26 @@
   text-decoration: none;
 }
 
-.action-buttons button {
+.edit-btn {
   background-color: #e74c3c; /* Red */
-  color: rgb(255, 255, 255);
+  color: rgb(64, 73, 202);
   border: none;
   padding: 8px 12px;
   border-radius: 4px;
-  cursor: pointer;
 }
-
-.action-buttons button:hover {
+.delete-btn {
+  background-color: #753737;
+  color: rgb(238, 5, 5);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.edit-btn:hover {
+  background-color: #1a0cdf; /* Darker Red */
+}
+.delete-btn:hover {
   background-color: #c0392b; /* Darker Red */
 }
-/* ButtonStyles.css */
-
-/* Edit Button */
-.edit-button {
-  display: inline-block;
-  padding: 8px 16px;
-  background-color: #3498db; /* Blue */
-  text-decoration: none;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.edit-button:hover {
-  background-color: #2980b9; /* Darker Blue */
-}
-
-/* Delete Button */
-.delete-button{
-  display: inline-block;
-  padding: 8px 16px;
-  background-color: #5081a1; /* Blue */
-  text-decoration: none;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.delete-button:hover {
-  background-color: #c0392b; /* Darker Red */
-}
-
 

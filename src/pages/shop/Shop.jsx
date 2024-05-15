@@ -1,41 +1,40 @@
-import React, { useEffect, useState } from 'react'
-
+import React, { useEffect, useState } from 'react';
 import { Card } from "flowbite-react";
+import "./shop.css"; // Importing external CSS file
 
 const Shop = () => {
+  const [items, setItems] = useState([]);
 
-  const [items,setItems]=useState([]);
-
-  useEffect( ()=> {
-    fetch("http://localhost:8080/Items/").then(res => res.json()).then(data =>setItems(data));
-  }, [])
+  useEffect(() => {
+    fetch("http://localhost:8090/Items/")
+      .then(res => res.json())
+      .then(data => setItems(data))
+      .catch(error => console.log("Error fetching items:", error));
+  }, []);
 
   return (
-    <div className='mt-28 px-4 lg:px24'>
-      <h2 className='text-5xl font-bold text-center'>Electronics</h2>
+    <div className='layout'>
+      <h2 className='text-5xl '>Electronics</h2>
 
       <div className='grid gap-8 my-12 lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 grid-cols-1'>
-        {
-          items.map(item =><Card
-            className="max-w-sm"
-            
-          >
-            <img src={item.imageUrl} alt='' className='h-96'/>
-            <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-Black">
-               {item.itemName}
-              
-            </h5>
-            <p className="font-normal text-gray-700 dark:text-gray-400">
-             LKR{item.ItemPrice}<br></br>
-             Category:{item.itemCategory}
-            </p>
-
-            <button className='bg-blue-700 font-semibold text-white py-2 rounded '>Shop now</button>
-          </Card> )
-        }
+        {items.map(item => (
+          <Card key={item.id} className="my-card">
+            <img src={item.imageUrl} alt={item.itemName} className='my-card-image' />
+            <div className="my-card-content">
+              <h5 className="my-card-title">{item.itemName}</h5>
+              <p className="my-card-info">
+                LKR {item.ItemPrice}<br />
+                Category: {item.itemCategory}
+              </p>
+              <button className='shop-now-btn'>
+                Shop now
+              </button>
+            </div>
+          </Card>
+        ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Shop
+export default Shop;

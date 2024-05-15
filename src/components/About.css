@@ -1,21 +1,42 @@
 .royal-electronics-intro {
-    text-align: center;
-    margin: 0 auto;
-    max-width: 1000px;
-    padding: 50px 20px;
-    margin-bottom: 100px;
-  }
-  
-  .royal-electronics-intro h1 {
-    font-size: 70px;
-    color: #333;
-    margin-bottom: 40px;
-    margin-bottom: 20px;
-  }
-  
-  .royal-electronics-intro p {
-    font-size: 30px;
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 20px;
-  }
+  text-align: center;
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 50px 20px;
+  margin-bottom: 100px;
+}
+
+.royal-electronics-intro h1 {
+  font-size: 70px;
+  color: #333;
+  margin-bottom: 40px;
+  margin-bottom: 20px;
+}
+
+.royal-electronics-intro p {
+  font-size: 30px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.royal-electronics-intro:hover {
+  background-color: #f0f0f0;
+}
+
+.royal-electronics-intro h1 {
+  transition: color 0.3s ease;
+}
+
+.royal-electronics-intro:hover h1 {
+  color: #0070f3;
+}
+
+.royal-electronics-intro {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.royal-electronics-intro:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}

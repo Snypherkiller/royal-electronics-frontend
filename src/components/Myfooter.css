@@ -1,0 +1,12 @@
+.w-full.bg-gray-700 {
+  width: 100%;
+  background-color: #191924;
+  transition: background-color 0.3s ease;
+  padding: 3rem;
+  margin: 0;
+  display: flex;
+  gap: 10rem;
+  font-weight: bold;
+
+
+}

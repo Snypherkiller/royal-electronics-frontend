@@ -1,0 +1,62 @@
+/* uploadItem.css */
+
+.upload-item-container {
+    padding: 10px;
+    background-color: rgb(206, 225, 236);
+
+  }
+  
+  .upload-item-heading {
+    margin-bottom: 30px;
+    font-size: 40px;
+    font-weight: bold;
+    
+  }
+  
+  .upload-item-label {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .upload-item-input {
+    width: 100%;
+    padding: '15px';
+    margin-bottom: 20px;
+    border-radius: 5px;
+
+    
+  }
+  
+  .upload-item-textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .upload-item-select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .upload-item-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .upload-item-button:hover {
+    background-color: #0056b3;
+  }
+  .upload-item-group {
+    margin-bottom: 15px;
+  }

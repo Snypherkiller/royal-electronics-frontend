@@ -1,0 +1,101 @@
+
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.3s ease-in;
+  }
+  
+  .navbar.sticky {
+    background-color: rgba(1, 1, 43, 0.75); }
+  nav {
+    padding: 1rem 6rem; 
+  }
+  
+ 
+  .logo {
+    font-size: 1rem; 
+    font-weight: bold;
+    color: #d30000; 
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .menu-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+    font-weight: bold;
+
+}
+  
+  .menu-items li {
+    display: inline-block;
+  }
+  
+  .menu-items li a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 0.5rem 1rem; 
+    border-radius: 0.5rem; 
+    transition: background-color 0.3s ease;
+  }
+  
+
+  
+.menu-items li a:hover {
+  background-color: #f0f0f0;
+  color: #0070f3;
+}
+  
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #0070f3; 
+    opacity: 0.75; 
+    padding: 1rem;
+  }
+  
+  .mobile-menu.open {
+    display: block;
+  }
+  
+  .mobile-menu a {
+    display: block;
+    font-size: 1rem; 
+    text-decoration: none;
+    color: #000; 
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  
+  .mobile-menu a:hover {
+    color: #0070f3; 
+  }
+  
+  .menu-toggle {
+    display: none;
+  }
+  
+  .menu-toggle button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .menu-toggle button:hover {
+    color: #0070f3; 
+  }
+  
+  
