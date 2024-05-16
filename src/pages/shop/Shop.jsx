@@ -12,6 +12,7 @@ const Shop = () => {
       .catch(error => console.log("Error fetching items:", error));
   }, []);
 
+
   return (
     <div className='layout'>
       <h2 className='text-5xl '>Electronics</h2>
@@ -24,14 +25,16 @@ const Shop = () => {
               <h5 className="my-card-title">{item.itemName}</h5>
               <p className="my-card-info">
                 LKR {item.ItemPrice}<br />
-                Category: {item.itemCategory}
+                Category: {item.itemCategory}<br/>
+                Review:
               </p>
               <button className='shop-now-btn'>
                 Shop now
               </button>
+              <a href='/addReview'>
               <button className='review-now-btn'>
                 Add review
-              </button>
+              </button></a>
             </div>
           </Card>
         ))}

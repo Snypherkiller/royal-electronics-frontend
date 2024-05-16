@@ -27,6 +27,8 @@ import UpdateSupplier from "../pages/dashboard/UpdateSupplier";
 import AllEmployees from "../components/AllEmployees";
 import EditEmployee from "../components/EditEmployee";
 import DeleteEmployee from "../components/DeleteEmployee";
+import Purchers from "../components/Purches";
+import ReviewPops from "../components/ReviewPops";
 
 
 
@@ -67,6 +69,10 @@ const router = createBrowserRouter([
        fetch(`http://localhost:8090/Items/get/${params.id}`) 
   
       },
+      {
+        path:"/reviewSetup",
+        element:<Purchers/>
+      }
 
     ]
   },
@@ -134,6 +140,10 @@ const router = createBrowserRouter([
         },
 
 ]},
+{
+  path:"/addReview",
+  element:<ReviewPops/>
+}
 
 
 ]);
