@@ -40,18 +40,11 @@ export default function Nav(){
       <nav className="bg-gray-800 p-4">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center">
-          {/* Logo or site title */}
-          <div className="text-white font-semibold  ml-1 flex text-2xl"><TbBrandElectronicArts size={35} className=' mr-4' /> Royal Electronics</div>
            
           
-           <ul className=' flex mr-46 '>
-             <li><a href="#" className=' text-blue-50 mr-10 font-semibold '>Home</a></li>
-             <li><a href="#" className=' text-blue-50 mr-10 font-semibold '>Contacts</a></li>
-             <li><a href="#" className=' text-blue-50 mr-10 font-semibold '>About me</a></li>
-           </ul>
                 <div className=''>
                   <input
-                    className=' border-blue-400 outline-none p-1 rounded-md pl-3 font-semibold'
+                    className=' border-blue-400 outline-none p- rounded-md pl-3 font-semibold'
                     type="text"
                     placeholder="Search..."
                     value={searchTerm}

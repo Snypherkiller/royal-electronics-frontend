@@ -2,7 +2,7 @@ import React , { useState }from "react";
 import Nav from "../components/Nav";
 import SiderBar from "../components/SiderBar";
 import CardCoustom from "../components/Card_coustom";
-import ReviewPops from "./screens_customer/ReviewPops";
+import ReviewPops from "./ReviewPops";
 
 
 export default function Purchers (){

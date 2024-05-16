@@ -34,7 +34,8 @@ const Navbar = () => {
         { link: 'Blog', path: '/blog' },
         { link: 'Sign-in', path: 'customer/login' },
         { link: 'Sign-up', path: '/Sign-up' },
-        
+        { link: 'Review', path: '/reviewSetup' },
+
 
         // admin
         { link: 'Admin', path: '/admin/dashboard' }
