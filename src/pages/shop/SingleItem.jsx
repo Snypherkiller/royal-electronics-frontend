@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-const SingleItem = () => {
+const SingleItem = ({ searchTerm }) => {
   const { id } = useParams();
   const [item, setItem] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:8090/Items/get/${id}`)
+    // Fetch item data based on id and search term
+    fetch(`http://localhost:8090/Items/get/${id}?search=${searchTerm}`)
       .then(res => res.json())
       .then(data => setItem(data.item))
       .catch(error => console.log("Error fetching item:", error));
-  }, [id]);
+  }, [id, searchTerm]);
 
   if (!item) {
     return <div>Loading...</div>;
