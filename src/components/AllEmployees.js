@@ -69,15 +69,22 @@ export default function AllEmployees() {
 
     doc.text(40, 200, `Total Employees : ${employees.length}`)
 
-    const tableColumn = ["Name", "Address", "Phone","Email","Gender",];
+    const tableColumn = ["Name", "Address", "Phone","Email","Gender","Position","Attendance","Salary"];
     const tableRows = [];
 
     employees.forEach(user => {
         const userData = [
             
-            user._id,
+            
             user.name,
+            user.address,
+            user.phone,
             user.email,
+            user.gender,
+            user.position,
+            user.attendance,
+            user.salary,
+
             
         ];
         tableRows.push(userData);
