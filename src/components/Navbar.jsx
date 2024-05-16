@@ -35,6 +35,7 @@ const Navbar = () => {
         { link: 'Sign-in', path: 'customer/login' },
         { link: 'Sign-up', path: '/Sign-up' },
         
+
         // admin
         { link: 'Admin', path: '/admin/dashboard' }
     ];

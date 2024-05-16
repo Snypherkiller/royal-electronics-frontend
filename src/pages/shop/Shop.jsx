@@ -29,6 +29,9 @@ const Shop = () => {
               <button className='shop-now-btn'>
                 Shop now
               </button>
+              <button className='review-now-btn'>
+                Add review
+              </button>
             </div>
           </Card>
         ))}

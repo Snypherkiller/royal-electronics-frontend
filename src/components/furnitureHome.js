@@ -3,7 +3,7 @@ import Nav from "./Nav";
 import SideBar from "./SiderBar";
 import CardCoustom from "./Card_coustom";
 
-export default function Home(){
+export default function FurnitureHome(){
     return(
         <div className=" flex-col">
             <Nav/>

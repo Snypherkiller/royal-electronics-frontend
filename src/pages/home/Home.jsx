@@ -1,6 +1,5 @@
 
 import Banner from '../../components/Banner';
-import furnitureHome from '../../components/furnitureHome';
 
 
 import BestSellerItems from './BestSellerItem';
@@ -17,8 +16,6 @@ const Home = () => {
       <BestSellerItems/>
       <FavItem/>
       <OtherItems/>
-      <furnitureHome/>
-      
       
     
     </div>
