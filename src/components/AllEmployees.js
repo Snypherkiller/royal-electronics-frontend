@@ -67,17 +67,24 @@ export default function AllEmployees() {
 
     doc.text(150, 93, title);
 
-    doc.text(40, 200, `Total Employees : ${employees.length}`)
+    doc.text(40, 200, `Total Employees : ${employees.length }`)
 
-    const tableColumn = ["Name", "Address", "Phone","Email","Gender",];
+    const tableColumn = ["Name", "Address", "Phone","Email","Gender","Position","Attendance","Salary"];
     const tableRows = [];
 
     employees.forEach(user => {
         const userData = [
             
-            user._id,
+            
             user.name,
+            user.address,
+            user.phone,
             user.email,
+            user.gender,
+            user.position,
+            user.attendance,
+            user.salary,
+
             
         ];
         tableRows.push(userData);
@@ -156,7 +163,8 @@ export default function AllEmployees() {
           ))}
         </tbody>
       </table>
-      <button onClick={()=>createPDF()}>Genarate Report</button>
+        
+      <button iconb="picture_as_pdf" content="Download Report" c="white" bg="blue" onClick={()=>createPDF()}>Genarate Report</button>
     </div>
 
   );
