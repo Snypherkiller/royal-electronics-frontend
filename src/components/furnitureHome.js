@@ -1,7 +1,7 @@
 import React from "react";
-import Nav from "../components/Nav";
-import SideBar from "../components/SiderBar";
-import CardCoustom from "../components/Card_coustom";
+import Nav from "./Nav";
+import SideBar from "./SiderBar";
+import CardCoustom from "./Card_coustom";
 
 export default function Home(){
     return(
