@@ -32,7 +32,7 @@ const Navbar = () => {
         { link: 'About', path: '/about' },
         { link: 'Shop', path: '/shop' },
         { link: 'Blog', path: '/blog' },
-        { link: 'Sign-in', path: '/login' },
+        { link: 'Sign-in', path: 'customer/login' },
         { link: 'Sign-up', path: '/Sign-up' },
         // admin
         { link: 'Admin', path: '/admin/dashboard' }

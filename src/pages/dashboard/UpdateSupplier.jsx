@@ -1,5 +1,5 @@
 
-import { Button, Checkbox, Label, TextInput,Textarea } from "flowbite-react";
+import { Button, Label, TextInput, } from "flowbite-react";
 import { useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 

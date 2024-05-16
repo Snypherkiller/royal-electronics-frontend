@@ -1,0 +1,67 @@
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 60px;
+    background-color: #fff;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .form-check {
+    margin-bottom: 20px;
+  }
+  
+  .form-check-label {
+    font-weight: normal;
+  }
+  
+  .btn-primary {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .dropdown-divider {
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+  }
+  
+  .dropdown-item {
+    display: block;
+    padding: 10px;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .dropdown-item:hover {
+    color: #0056b3;
+  }
+  

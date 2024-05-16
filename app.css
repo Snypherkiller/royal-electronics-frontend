@@ -1,0 +1,143 @@
+/*Add customer*/
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+   
+  body {
+    font-family: Arial, sans-serif; /* Standard font family */
+    line-height: 1.6; /* Improve readability by setting line height */
+    background-color: #f8f9fa; /* Set background color */
+  }
+   
+  .container {
+    margin: 20px auto;
+    width: 80%; /* Adjust container width for better layout */
+    max-width: 1200px; /* Set maximum container width */
+    padding: 20px;
+    background-color: #fff; /* Set background color */
+    border-radius: 10px; /* Add border radius for rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+  }
+   
+  h1, h2, h3 {
+    color: #333; /* Set heading color to dark gray */
+    margin-bottom: 20px; /* Add margin bottom for spacing */
+  }
+   
+  p {
+    margin-bottom: 15px; /* Add margin bottom for spacing */
+  }
+   
+  .form-group {
+    margin-bottom: 20px;
+  }
+   
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease; /* Add transition for smoother interaction */
+  }
+   
+  .form-control:focus {
+    border-color: #007bff; /* Change border color on focus for better visual feedback */
+  }
+   
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add transition for smoother interaction */
+  }
+   
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+   
+  .dropdown-divider {
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+  }
+   
+  .dropdown-item {
+    display: block;
+    padding: 10px 20px;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+  }
+   
+  .dropdown-item:hover {
+    background-color: #f8f9fa;
+    text-decoration: none;
+    color: #007bff;
+  }
+   
+  /* Existing styles from the original CSS file */
+   
+  .App {
+    text-align: center;
+  }
+   
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+   
+  .App-link {
+    color: #61dafb;
+  }
+   
+  .customer-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+   
+  .customer-table th, .customer-table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+   
+  .customer-table th {
+    background-color: #f2f2f2;
+  }
+   
+  .customer-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+   
+  .customer-table tr:hover {
+    background-color: #ddd;
+  }
+   
+  .update-btn, .delete-btn {
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    background-color: #007bff;
+    color: #fff;
+  }
+   
+  .update-btn:hover, .delete-btn:hover {
+    background-color: #0056b3;
+  }
+   

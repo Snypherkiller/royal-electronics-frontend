@@ -4,7 +4,6 @@ import "../App.css"; // Import CSS fil
 import { useNavigate } from "react-router-dom";
 
 export default function AddCustomer() {
-  const [customerId, setCustomerId] = useState("");
   const [name, setName] = useState("");
   const [telephoneNo, setTelephoneNo] = useState("");
   const [email, setEmail] = useState("");
@@ -22,8 +21,7 @@ export default function AddCustomer() {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    if (name === "customerId") setCustomerId(value);
-    else if (name === "name") setName(value);
+   if (name === "name") setName(value);
     else if (name === "telephoneNo") setTelephoneNo(value);
     else if (name === "email") setEmail(value);
     else if (name === "idNumber") setIdNumber(value);

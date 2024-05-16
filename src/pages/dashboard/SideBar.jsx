@@ -10,6 +10,9 @@ const SideBar = () => {
           <Sidebar.Item href="/admin/dashboard" icon={HiChartPie} style={itemStyles}>
             Dashboard
           </Sidebar.Item>
+          <Sidebar.Item href="/" icon={HiShoppingBag} style={itemStyles}>
+            Products
+          </Sidebar.Item>
           <Sidebar.Item href="/admin/dashboard/upload" icon={HiOutlineCloudUpload} style={itemStyles}>
             Upload Items
           </Sidebar.Item>
@@ -19,14 +22,14 @@ const SideBar = () => {
           <Sidebar.Item href="/admin/dashboard/suppliers" icon={HiUser} style={itemStyles}>
             Suppliers
           </Sidebar.Item>
-          <Sidebar.Item href="/" icon={HiShoppingBag} style={itemStyles}>
-            Products
+          <Sidebar.Item href="/admin/dashboard/employee/" icon={HiUser} style={itemStyles}>
+            Employees
           </Sidebar.Item>
-          <Sidebar.Item href="#" icon={HiArrowSmRight} style={itemStyles}>
-            Sign In
+          <Sidebar.Item href="/admin/dashboard/employee/add" icon={HiArrowSmRight} style={itemStyles}>
+            Add Employee
           </Sidebar.Item>
-          <Sidebar.Item href="#" icon={HiTable} style={itemStyles}>
-            Sign Up
+          <Sidebar.Item href="/admin/dashboard/employee/update" icon={HiTable} style={itemStyles}>
+            Update Employee
           </Sidebar.Item>
 
           <Sidebar.Item href="#" icon={BiBuoy} style={itemStyles}>

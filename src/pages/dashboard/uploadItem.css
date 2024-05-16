@@ -1,8 +1,9 @@
 /* uploadItem.css */
 
 .upload-item-container {
-    padding: 10px;
+    padding: 20px;
     background-color: rgb(206, 225, 236);
+    width: 100%;
 
   }
   

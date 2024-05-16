@@ -6,7 +6,7 @@ export default function DeleteEmployee() {
 
     const params = useParams();
   const employeeId = params.id;
-  const baseUrl = `employee/`;
+  const baseUrl = "/admin/dashboard/employee";
 
     const navigate = useNavigate();
 

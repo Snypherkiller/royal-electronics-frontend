@@ -1,7 +1,7 @@
 /* Styles for form container */
-.form-container {
-    max-width: 800px;
-    margin: 0 auto;
+.update-item-container {
+    width: 100%;
+    margin: 1 auto;
     padding: 20px;
   }
   

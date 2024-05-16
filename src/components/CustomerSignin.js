@@ -2,6 +2,7 @@ import axios from "../utils/axios";
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import "./cusSign.css"
 
 export default function CustomerSignin() {
   const navigate = useNavigate();
@@ -21,20 +22,29 @@ export default function CustomerSignin() {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("Form submitted:", formData);
-    axios
-      .post("customer/login", formData)
-      .then((res) => {
-        if (res.data.status == "success") {
-          let id = res.data.id;
-          navigate(`profile/${id}`);
-        }else{
-          alert(res.data.message)
-        }        
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    alert("Form submitted")
+    
+    fetch("http://localhost:8090/customer/login", {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    })
+    .then(response => response.json())
+    .then((res) => {
+      if (res.status === "success") {
+        let id = res.id;
+        navigate(`profile/${id}`);
+      } else {
+        alert(res.message);
+      }        
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
   };
+  
 
   return (
     <div className="container">

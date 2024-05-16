@@ -143,10 +143,10 @@ export default function AllEmployees() {
               <td>{employee.password}</td>
               <td>
               <div>
-                  <Link to={`/employee/update/${employee._id}`}>
+                  <Link to={`/admin/dashboard/employee/update/${employee._id}`}>
                     <AiOutlineEdit className='text-2x1 text-yellow-600' />
                   </Link>
-                  <Link to={`/employee/delete/${employee._id}`}>
+                  <Link to={`/admin/dashboard/employee/delete/${employee._id}`}>
                     <MdOutlineAddBox className='text-2x1 text-yellow-600' />
                   </Link>
                 </div>
