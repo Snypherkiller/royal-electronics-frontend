@@ -61,6 +61,18 @@ const router = createBrowserRouter([
         path:"/Sign-up",
         element: <AddCustomer/>
       },
+      {
+        path: "customer/login",
+        element: <CustomerSignin/>,
+        children: [
+          {
+            path:"/customer/login/profile/:id",
+            element:<CustomerProfile/>,
+            loader: ({ params }) =>
+            fetch(`http://localhost:8090/profile/${params.id}`) 
+          },
+  
+  ]},
  
       {
         path: "/Items/get/:id",
@@ -128,18 +140,7 @@ const router = createBrowserRouter([
       },   
      ]
   },
-    {
-      path: "customer/login",
-      element: <CustomerSignin/>,
-      children: [
-        {
-          path:"/customer/login/profile/:id",
-          element:<CustomerProfile/>,
-          loader: ({ params }) =>
-          fetch(`http://localhost:8090/profile/${params.id}`) 
-        },
 
-]},
 {
   path:"/addReview",
   element:<ReviewPops/>
