@@ -8,7 +8,7 @@ import { registerValidation } from '../helper/validate';
 import { registerUser } from '../helper/helper'
 
 
-import styles from '../styles/username.module.css';
+import styles from '../styles_PCUSTOMER/username.module.css';
 
 export default function Register() {
 
