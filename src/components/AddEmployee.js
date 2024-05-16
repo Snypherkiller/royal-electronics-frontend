@@ -54,7 +54,7 @@ export default function AddEmployee() {
         <div className="row mb-3">
           <label htmlFor="inputname3" className="col-sm-2 col-form-label">Name</label>
           <div className="col-sm-10" >
-            <input type="name" className="form-control" id="inputname3" placeholder="Tharidu Nimesh" onChange={(e) => {
+            <input type="name" className="form-control" id="inputname3" placeholder="Enter Name..." onChange={(e) => {
 
               setName(e.target.value);
 
@@ -65,7 +65,7 @@ export default function AddEmployee() {
         <div className="row mb-3">
           <label htmlFor="inputaddress3" className="col-sm-2 col-form-label">Address</label>
           <div className="col-sm-10">
-            <input type="address" className="form-control" id="inputaddress3" placeholder="Pinnawathta Poththapitiya" onChange={(e) => {
+            <input type="address" className="form-control" id="inputaddress3" placeholder="Enter Address..." onChange={(e) => {
 
               setAddress(e.target.value);
 
@@ -76,7 +76,7 @@ export default function AddEmployee() {
         <div className="row mb-3">
           <label htmlFor="inputnic3" className="col-sm-2 col-form-label">NIC</label>
           <div className="col-sm-10">
-            <input type="nic" className="form-control" id="inputnic3" placeholder="299300435V" onChange={(e) => {
+            <input type="nic" className="form-control" id="inputnic3" placeholder="Enter NIC..." onChange={(e) => {
 
               setNIC(e.target.value);
 
@@ -87,7 +87,7 @@ export default function AddEmployee() {
         <div className="row mb-3">
           <label htmlFor="inputphone3" className="col-sm-2 col-form-label">Phone</label>
           <div className="col-sm-10">
-            <input type="tel" className="form-control" id="inputphone3" placeholder="077-4326758" onChange={(e) => {
+            <input type="tel" className="form-control" id="inputphone3" placeholder="Contact Number..." onChange={(e) => {
 
               setPhone(e.target.value);
 
@@ -98,7 +98,7 @@ export default function AddEmployee() {
         <div className="row mb-3">
           <label htmlFor="inputEmail3" className="col-sm-2 col-form-label">E-mail</label>
           <div className="col-sm-10">
-            <input type="email" className="form-control" id="inputEmail3" placeholder="tharidu22@gmail.com" onChange={(e) => {
+            <input type="email" className="form-control" id="inputEmail3" placeholder="Enter Email..." onChange={(e) => {
 
               setEmail(e.target.value);
 
