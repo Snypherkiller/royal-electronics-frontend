@@ -11,8 +11,13 @@ import About from "../components/About";
 import Blog from "../components/Blog";
 import AddCustomer from "../components/AddCustomer"
 import CustomerSignin from "../components/CustomerSignin"
-import CustomerProfile from "../components/CustomerProfile"
 import AddEmployee from "../components/AddEmployee"
+import AllEmployees from "../components/AllEmployees";
+import EditEmployee from "../components/EditEmployee";
+import DeleteEmployee from "../components/DeleteEmployee";
+import Purchers from "../components/Purches";
+import ReviewPops from "../components/ReviewPops";
+
 
 
 
@@ -24,11 +29,9 @@ import UpdateItems from "../pages/dashboard/UpdateItems";
 import SuppliersManage from "../pages/dashboard/SuppliersManage";
 import AddSupplier from "../pages/dashboard/AddSupplier";
 import UpdateSupplier from "../pages/dashboard/UpdateSupplier";
-import AllEmployees from "../components/AllEmployees";
-import EditEmployee from "../components/EditEmployee";
-import DeleteEmployee from "../components/DeleteEmployee";
-import Purchers from "../components/Purches";
-import ReviewPops from "../components/ReviewPops";
+import CusVal from "../components/cusVal";
+import Register from "../components/register";
+
 
 
 
@@ -59,9 +62,16 @@ const router = createBrowserRouter([
       },
       {
         path:"/Sign-up",
-        element: <AddCustomer/>
+        element: <CusVal/>
       },
- 
+      {
+        path:"/Sign-up/normal",
+        element:<AddCustomer/>
+      },
+      {
+        path:"Sign-up/previledge",
+        element:<Register/>
+      },
       {
         path: "/Items/get/:id",
         element: <SingleItem/>,
@@ -72,8 +82,21 @@ const router = createBrowserRouter([
       {
         path:"/reviewSetup",
         element:<Purchers/>
-      }
+      },
+      {
+        path:"/customer",
+        element:<CusVal/>,
+      },
+       
+      {
+        path:"/customer/login",
+        element:<CustomerSignin/>
 
+      }  
+
+
+
+      
     ]
   },
   {
@@ -128,18 +151,7 @@ const router = createBrowserRouter([
       },   
      ]
   },
-    {
-      path: "customer/login",
-      element: <CustomerSignin/>,
-      children: [
-        {
-          path:"/customer/login/profile/:id",
-          element:<CustomerProfile/>,
-          loader: ({ params }) =>
-          fetch(`http://localhost:8090/profile/${params.id}`) 
-        },
 
-]},
 {
   path:"/addReview",
   element:<ReviewPops/>
@@ -147,5 +159,6 @@ const router = createBrowserRouter([
 
 
 ]);
+
 
 export default router;
