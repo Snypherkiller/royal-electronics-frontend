@@ -16,7 +16,7 @@ export default function Comments(){
     }).catch((error)=>{
       console.log("Error:",error)
     })
-  },[triggerFetch])
+  },[triggerFetch])//X
 
 
   const deleteReview=(value)=>{
