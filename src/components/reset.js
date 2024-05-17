@@ -7,7 +7,7 @@ import { useAuthStore } from '../store/store';
 import { useNavigate/** , Navigate */} from 'react-router-dom';
 //import useFetch from '../hooks/fetch.hook'
 
-import styles from '../styles/username.module.css';
+import styles from '../styles_PCUSTOMER/username.module.css';
 
 export default function Reset() {
 
