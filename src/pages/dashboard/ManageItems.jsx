@@ -3,7 +3,7 @@ import axios from 'axios';
 import "./Styles.css";
 import { Link } from 'react-router-dom';
 
-const ManageItems = () => {
+export default function ManageItems  () {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -27,45 +27,53 @@ const ManageItems = () => {
     });
   };
 
-  const generateInventoryReport = () => {
-    const electronicsItems = data.filter(item => item.itemCategory === "Electronics");
-    let report = `
-      <div class='report-container'>
-        <h2>Electronics Inventory Report</h2>
-        <table class='report-table'>
-          <thead>
-            <tr>
-              <th>Item Name</th>
-              <th>Item Description</th>
-              <th>Item Quantity</th>
-              <th>Item Price</th>
-              <th>Image Url</th>
-            </tr>
-          </thead>
-          <tbody>
-    `;
-    electronicsItems.forEach(item => {
-      report += `
-        <tr>
-          <td>${item.itemName}</td>
-          <td>${item.itemDescription}</td>
-          <td>${item.itemQty}</td>
-          <td>${item.ItemPrice}</td>
-          <td>${item.imageUrl}</td>
-        </tr>
-      `;
-    });
-    report += `
-          </tbody>
-        </table>
-      </div>
-    `;
-  
-    // Open the report in a new window
-    const newWindow = window.open('', '_blank');
-    newWindow.document.write(`<html><head><title>Electronics Inventory Report</title><link rel="stylesheet" type="text/css" href="styles.css"></head><body>${report}</body></html>`);
-    newWindow.document.close();
-  };
+
+  function Updateitems(){
+
+    const[furniture,setfurniture]=useState([]);
+    const[furnituren,setfurnituren]=useState([]);
+    
+
+
+  useEffect(()=>{
+    axios.get("http://localhost:8090/furniture/")
+    .then(res=>setfurniture(res.data))
+    .catch((err)=>{console.log(err)})
+  },[])
+
+}
+
+  const handleDownload = () => {
+    axios.get("http://localhost:8090/furniture/")
+        .then(res => {
+            setfurniture(res.data);
+
+            var doc = new jsPDF();
+            const headers = ["Number", "Furniture Name", "Type", "Purchase price", "Status", "Quantity", "Selling Price", "Description", "Profit"];
+            const data = res.data.map((item, index) => [
+                index + 1,
+                item.name,
+                item.type,
+                item.pprice,
+                item.status,
+                item.quantity,
+                item.sprice,
+                item.description,
+                (item.sprice - item.pprice) * item.quantity
+            ]);
+
+            doc.autoTable({
+                head: [headers],
+                body: data,
+                styles: { fontSize: 8, cellPadding: 1, overflow: 'linebreak' },
+                theme: 'grid'
+            });
+
+            doc.save("Furniture_Report.pdf");
+        })
+        .catch((err) => {
+            console.log(err);
+        });
 
   return (
     <div className='container'>
@@ -106,5 +114,3 @@ const ManageItems = () => {
     </div>
   );
 };
-
-export default ManageItems;
