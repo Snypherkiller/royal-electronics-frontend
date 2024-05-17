@@ -18,6 +18,7 @@ import DeleteEmployee from "../components/DeleteEmployee";
 import Purchers from "../components/Purches";
 import ReviewPops from "../components/ReviewPops";
 import Valdation from "../components/valdation";
+import UpdateCustomer from "../components/UpdateCustomer"
 import CustomerProfile from "../components/CustomerProfile";
 
 
@@ -33,6 +34,13 @@ import AddSupplier from "../pages/dashboard/AddSupplier";
 import UpdateSupplier from "../pages/dashboard/UpdateSupplier";
 import CusVal from "../components/CusVal";
 import Register from "../components/register";
+import DeleteCustomer from "../components/DeleteCustomer";
+import Updateitems from "../components/furniturelist";
+import Update from "../components/Update";
+import Comments from "../components/Comments";
+
+
+
 
 
 
@@ -85,9 +93,17 @@ const router = createBrowserRouter([
         element:<Register/>
       },
       {
-        path:"/profile",
+        path:"/profile/:id",
         element:<CustomerProfile/>
 
+      },
+      {
+        path:"/profile/update/:id",
+        element:<UpdateCustomer/>
+      },
+      {
+        path:"/profile/delete/:id",
+        element:<DeleteCustomer/>
       },
 
     
@@ -167,7 +183,26 @@ const router = createBrowserRouter([
 
 {
   path:"/addReview",
-  element:<ReviewPops/>
+  element:<ReviewPops/>,
+  children:[
+    {
+      path:"/addReview/review",
+      element:<Comments/>
+
+    }
+  ]
+},
+{
+  path:"/furniture",
+  element:<Updateitems/>,
+  children: [
+    {
+      path:"/furniture/update/:name",
+      element:<Update/>
+
+
+    },
+  ]
 }
 
 

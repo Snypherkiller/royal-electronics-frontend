@@ -22,6 +22,7 @@ export default function CustomerSignin() {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("Form submitted:", formData);
+    
     alert("Form submitted")
     
     fetch("http://localhost:8090/customer/login", {
@@ -35,7 +36,7 @@ export default function CustomerSignin() {
     .then((res) => {
       if (res.status === "success") {
         let id = res.id;
-        navigate(`profile/${id}`);
+        navigate(`/profile/${id}`);
       } else {
         alert(res.message);
       }        
@@ -88,6 +89,7 @@ export default function CustomerSignin() {
         </div>
 
         <input type="submit" value="Sign In" className="btn btn-primary" />
+
       </form>
       <div className="dropdown-divider"></div>
       <Link className="dropdown-item" to="/customer/add">

@@ -1,7 +1,7 @@
 import React,{useEffect, useState} from "react";
 import Nav from "../components/Nav";
 import SiderBar from "../components/SiderBar";
-import ViewReview from "./screens_customer/ViewReview";
+import ViewReview from "./ViewReview";
 import axios from "axios";
 
 export default function Comments(){

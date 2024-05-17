@@ -26,7 +26,6 @@ const Shop = () => {
               <p className="my-card-info">
                 LKR {item.ItemPrice}<br />
                 Category: {item.itemCategory}<br/>
-                Review:
               </p>
               <button className='shop-now-btn'>
                 Shop now

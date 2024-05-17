@@ -32,11 +32,11 @@ export default function AllCustomers(){
     };
 
     const handleUpdate = (customerId) => {
-        navigate(`/customer/update/${customerId}`)
+        navigate(`/profile/update/${customerId}`)
     };
 
     const handleDelete = (customerId) => {
-        navigate(`/customer/delete/${customerId}`)
+        navigate(`/profile/delete/${customerId}`)
 
     };
 

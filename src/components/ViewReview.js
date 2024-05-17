@@ -1,5 +1,4 @@
 import React,{useState,useEffect} from "react";
-import avatar from '../../assets/avatar.jpg';
 import { FiXCircle } from "react-icons/fi";
 import ReviewPops from "./ReviewPops";
 import axios from 'axios';
@@ -28,7 +27,6 @@ const close=()=>{
     <div style={{height:'200px',width:'400px',boxShadow: "1px 3px 1px #9E9E9E",borderRadius:'10px',outline:'2px solid Black',marginBottom: '40px'}}>
     <div style={{height:'50px',display:'flex',flexDirection:'row',justifyContent:'space-evenly',alignItems:'center',padding:'3px'}}>
         <div style={{height:'45px',width:'45px',borderRadius:'45px'}}>
-            <img src={avatar}></img>
         </div>
         <div style={{height:'45px',width:'280px',color:'black',display:'flex', flexDirection: 'column'}}>
             
