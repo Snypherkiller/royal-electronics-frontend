@@ -5,7 +5,7 @@ import { useFormik } from 'formik';
 import convertToBase64 from './convert';
 import { registerValidation } from './validate';
 import { registerUser } from './helper'
-
+import avatar from '../assets/profile.png'
 
 import styles from '../styles_PCUSTOMER/username.module.css';
 
@@ -61,6 +61,8 @@ export default function Register() {
           <form className='py-1' onSubmit={formik.handleSubmit}>
               <div className='profile flex justify-center py-4'>
                   <label htmlFor="profile">
+                  <img src={file || avatar} className={styles.profile_img} alt="avatar" />
+                  
                   </label>
                   
                   <input onChange={onUpload} type="file" id='profile' name='profile' />
