@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import "./Styles.css";
 import { Link } from 'react-router-dom';
+import jsPDF from 'jspdf';
 
 export default function ManageItems  () {
   const [data, setData] = useState([]);
@@ -28,38 +29,23 @@ export default function ManageItems  () {
   };
 
 
-  function Updateitems(){
-
-    const[furniture,setfurniture]=useState([]);
-    const[furnituren,setfurnituren]=useState([]);
-    
-
-
-  useEffect(()=>{
-    axios.get("http://localhost:8090/furniture/")
-    .then(res=>setfurniture(res.data))
-    .catch((err)=>{console.log(err)})
-  },[])
-
-}
 
   const handleDownload = () => {
-    axios.get("http://localhost:8090/furniture/")
+    axios.get("http://localhost:8090/Items")
         .then(res => {
-            setfurniture(res.data);
+            setData(res.data);
 
             var doc = new jsPDF();
-            const headers = ["Number", "Furniture Name", "Type", "Purchase price", "Status", "Quantity", "Selling Price", "Description", "Profit"];
+            const headers = ["Item name", "Item Description", "Item quantity", "Item Category", "Item price", "Image URL"];
             const data = res.data.map((item, index) => [
                 index + 1,
-                item.name,
-                item.type,
-                item.pprice,
-                item.status,
-                item.quantity,
-                item.sprice,
-                item.description,
-                (item.sprice - item.pprice) * item.quantity
+                item.itemName,
+                item.itemDescription,
+                item.itemQty,
+                item.itemCategory,
+                item.ItemPrice,
+                item.imageUrl,
+              
             ]);
 
             doc.autoTable({
@@ -69,7 +55,7 @@ export default function ManageItems  () {
                 theme: 'grid'
             });
 
-            doc.save("Furniture_Report.pdf");
+            doc.save("Electronics_Report.pdf");
         })
         .catch((err) => {
             console.log(err);
@@ -78,7 +64,7 @@ export default function ManageItems  () {
   return (
     <div className='container'>
       <h2 className='mb-8 text-3xl font-bold'>Manage Items</h2>
-      <button onClick={generateInventoryReport} className='generate-report-button'>Generate Inventory Report</button>
+      <button onClick={handleDownload} className='generate-report-button'>Generate Inventory Report</button>
 
       <div>
         <table className='table'>
@@ -113,4 +99,8 @@ export default function ManageItems  () {
       </div>
     </div>
   );
+<<<<<<< HEAD
   };
+=======
+}}
+>>>>>>> 0f2a359cbe0d6dc84224bad8e017248fd3ac1d5b
