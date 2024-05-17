@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import toast, { Toaster } from 'react-hot-toast';
 import { useFormik } from 'formik';
-import convertToBase64 from './convert';
-import { registerValidation } from './validate';
-import { registerUser } from './helper'
+import convertToBase64 from '../helper/convert';
+import { registerValidation } from '../helper/validate';
+import { registerUser } from '../helper/helper'
 import avatar from '../assets/profile.png'
 
 import styles from '../styles_PCUSTOMER/username.module.css';

@@ -1,12 +1,12 @@
 import React/** , { useEffect }*/ from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import avatar from '../assest/profile.png';
+import avatar from '../assets/profile.png';
 import { Toaster } from 'react-hot-toast';
 import { useFormik } from 'formik';
 import { usernameValidate } from '../helper/validate'
 import { useAuthStore } from '../store/store'
 
-import styles from '../styles/username.module.css';
+import styles from '../styles_PCUSTOMER/username.module.css';
 
 export default function Username() {
 

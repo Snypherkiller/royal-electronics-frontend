@@ -2,10 +2,13 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import React from 'react'
 import App from "../App";
 import Home from "../pages/home/Home";
 import Shop from "../pages/shop/Shop";
 import SingleItem from "../pages/shop/SingleItem";
+import { AuthorizeUser, ProtectRoute } from '../middleware/auth'
+
 
 import About from "../components/About";
 import Blog from "../components/Blog";
@@ -20,6 +23,11 @@ import ReviewPops from "../components/ReviewPops";
 import Valdation from "../components/valdation";
 import UpdateCustomer from "../components/UpdateCustomer"
 import CustomerProfile from "../components/CustomerProfile";
+import Password from '../components/password';
+import Profile from '../components/profile';
+import Recovery from '../components/Recovery';
+import Reset from '../components/reset';
+import Username from '../components/username';
 
 
 
@@ -93,6 +101,26 @@ const router = createBrowserRouter([
      {
         path:"/Sign-up/previledge",
         element:<Register/>
+      },
+      {
+        path : '/',
+        element : <Username></Username>
+      },
+      {
+          path : '/password',
+          element : <ProtectRoute><Password/></ProtectRoute>
+      },
+      {
+          path : '/profile',
+          element : <AuthorizeUser><Profile/></AuthorizeUser>
+      },
+      {
+          path : '/recovery',
+          element : <Recovery></Recovery>
+      },
+      {
+          path : '/reset',
+          element : <Reset></Reset>
       },
       {
         path:"/profile/:id",
