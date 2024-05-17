@@ -21,7 +21,7 @@ export default function SiderBar(){
               <Link to="/" className="block px-4 py-2 rounded hover:bg-gray-700 mt-6 font-extrabold  flex"> <MdOutlineDashboardCustomize size={35} className=" mr-4"/> Dashboard</Link>
             </li>
             <li className="mb-2  ml-0 hover:scale-50  duration-500">
-              <Link to="/comments" className="block px-4 py-2 rounded hover:bg-gray-700  mt-6 font-extrabold flex" ><MdOutlineRateReview  size={35} className=" mr-4"/>Review</Link>
+              <Link to="/ViewReview" className="block px-4 py-2 rounded hover:bg-gray-700  mt-6 font-extrabold flex" ><MdOutlineRateReview  size={35} className=" mr-4"/>Review</Link>
             </li>
             <li className="mb-2 hover:scale-50  duration-500">
               <Link to="/Puchers" className="block px-4 py-2 rounded hover:bg-gray-700 mt-6 font-extrabold flex"><RiShoppingCartLine  size={35} className=" mr-4"/>Purchased Item</Link>

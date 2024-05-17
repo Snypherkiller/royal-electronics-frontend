@@ -24,7 +24,7 @@ export default function EmployeeLogin() {
       const response = await axios.post("employee/login", formData);
       const { status, id, message } = response.data;
       if (status === "success") {
-        navigate(`/employee`);
+        navigate(`/admin/dashboard`);
       } else {
         alert(message);
       }

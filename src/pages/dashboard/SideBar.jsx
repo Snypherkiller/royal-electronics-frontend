@@ -29,7 +29,7 @@ const SideBar = () => {
             Add Employee
           </Sidebar.Item>
           <Sidebar.Item href="/admin/dashboard/employee/update" icon={HiTable} style={itemStyles}>
-            Update Employee
+            Add attendance
           </Sidebar.Item>
 
           <Sidebar.Item href="#" icon={BiBuoy} style={itemStyles}>

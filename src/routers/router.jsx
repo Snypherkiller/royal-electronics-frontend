@@ -46,6 +46,8 @@ import DeleteCustomer from "../components/DeleteCustomer";
 import Updateitems from "../components/furniturelist";
 import Update from "../components/Update";
 import Comments from "../components/Comments";
+import ViewReview from "../components/ViewReview";
+import EmployeeLogin from "../components/EmployeeLogin";
 
 
 
@@ -156,6 +158,11 @@ const router = createBrowserRouter([
       
     ]
   },
+{
+  path:"/login",
+  element:<EmployeeLogin/>
+},
+
   {
     path: "/admin/dashboard",
     element:<DashboardLayout/>,
@@ -209,7 +216,15 @@ const router = createBrowserRouter([
      ]
   },
 
+
+  {
+    path:"/ViewReview",
+    element:<ViewReview/>,
+
+  },
+
 {
+  
   path:"/addReview",
   element:<ReviewPops/>,
   children:[
@@ -223,14 +238,6 @@ const router = createBrowserRouter([
 {
   path:"/furniture",
   element:<Updateitems/>,
-  children: [
-    {
-      path:"/furniture/update/:name",
-      element:<Update/>
-
-
-    },
-  ]
 }
 
 

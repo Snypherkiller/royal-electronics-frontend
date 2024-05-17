@@ -150,11 +150,9 @@ function ReviewPops(props) {
             className="mt-1 p-2 border border-gray-300 rounded-md w-full"
           ></textarea>
         </div>
-        <a href='/addReview/review'> 
         <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">
           {props.buttonName}
         </button>
-        </a>
 
       </form>
     </div>
