@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import avatar from '../assests/profile.png';
 import toast, { Toaster } from 'react-hot-toast';
 import { useFormik } from 'formik';
 import convertToBase64 from './convert';
@@ -8,7 +7,7 @@ import { registerValidation } from './validate';
 import { registerUser } from './helper'
 
 
-import styles from '../styles/username.module.css';
+import styles from './styles/username.module.css';
 
 export default function Register() {
 
@@ -62,7 +61,6 @@ export default function Register() {
           <form className='py-1' onSubmit={formik.handleSubmit}>
               <div className='profile flex justify-center py-4'>
                   <label htmlFor="profile">
-                    <img src={file || avatar} className={styles.profile_img} alt="avatar" />
                   </label>
                   
                   <input onChange={onUpload} type="file" id='profile' name='profile' />
