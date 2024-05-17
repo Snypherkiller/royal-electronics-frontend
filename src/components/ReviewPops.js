@@ -130,8 +130,10 @@ function ReviewPops(props) {
             className="mt-1 p-2 border border-gray-300 rounded-md w-full"
           > 
              <option value="" disabled hidden>Comments category</option>
-             <option value="Bad Review">Bad Review</option>
-             <option value="Good Review">Good Review</option>
+             <option value="Userbility">Userbility</option>
+             <option value="Delivery">Delivery</option>
+             <option value="Price">Price</option>
+             <option value="Quality">Quality</option>
             
           </select>
            
