@@ -1,20 +1,20 @@
-import { Button } from 'flowbite-react';
-import React from 'react';
-
-const CusVal = () => {
+import React from 'react'
+export default function Valdation  ()  {
   return (
     <div style={styles.container}>
-      <h4 style={styles.heading}>Do you want to be a privileged Customer?</h4>
-      <a href='/Sign-up/previledge'>
+      <h2 style={styles.heading}>Are you a previledge customer?</h2>
+      <a>
         <button style={styles.button}>Yes</button>
       </a>
-      <a href="/Sign-up/normal" style={styles.link}>
+      <a href='/sign-in/customerSignin' style={styles.link}>
         <button style={styles.button}>No</button>
       </a>
     </div>
-  );
-};
+     
 
+
+  )
+}
 const styles = {
   container: {
     textAlign: 'center',
@@ -39,4 +39,6 @@ const styles = {
   },
 };
 
-export default CusVal;
+
+
+

@@ -17,6 +17,8 @@ import EditEmployee from "../components/EditEmployee";
 import DeleteEmployee from "../components/DeleteEmployee";
 import Purchers from "../components/Purches";
 import ReviewPops from "../components/ReviewPops";
+import Valdation from "../components/valdation";
+import CustomerProfile from "../components/CustomerProfile";
 
 
 
@@ -29,7 +31,7 @@ import UpdateItems from "../pages/dashboard/UpdateItems";
 import SuppliersManage from "../pages/dashboard/SuppliersManage";
 import AddSupplier from "../pages/dashboard/AddSupplier";
 import UpdateSupplier from "../pages/dashboard/UpdateSupplier";
-import CusVal from "../components/cusVal";
+import CusVal from "../components/CusVal";
 import Register from "../components/register";
 
 
@@ -61,17 +63,36 @@ const router = createBrowserRouter([
         element: <Blog />
       },
       {
+          path:"/sign-in",
+          element:<Valdation/>
+      },
+
+      {
+          path:"/sign-in/customerSignin",
+          element:<CustomerSignin/>
+      },
+
+      {
         path:"/Sign-up",
-        element: <CusVal/>
+        element: <CusVal/>,
       },
       {
         path:"/Sign-up/normal",
         element:<AddCustomer/>
-      },
-      {
-        path:"Sign-up/previledge",
+     },
+     {
+        path:"/Sign-up/previledge",
         element:<Register/>
       },
+      {
+        path:"/profile",
+        element:<CustomerProfile/>
+
+      },
+
+    
+   
+
       {
         path: "/Items/get/:id",
         element: <SingleItem/>,
@@ -83,16 +104,8 @@ const router = createBrowserRouter([
         path:"/reviewSetup",
         element:<Purchers/>
       },
-      {
-        path:"/customer",
-        element:<CusVal/>,
-      },
-       
-      {
-        path:"/customer/login",
-        element:<CustomerSignin/>
+  
 
-      }  
 
 
 
