@@ -19,7 +19,7 @@ export default function AllEmployees() {
 
   useEffect(() => {
     function getEmployees() {
-      axios.get('http://localhost:8090/employee')
+      axios.get('http://localhost:8090/employee')//
         .then((res) => {
           console.log(res.data);
           setEmployees(res.data);
